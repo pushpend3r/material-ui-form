@@ -21,7 +21,12 @@ class App extends Component {
           sint soluta culpa omnis odit commodi vero.
         </Typography>
         <Button variant="contained" color="primary">
-          Click here
+          <a
+            href="https://www.google.com"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            Click Here
+          </a>
         </Button>
       </>
     );
