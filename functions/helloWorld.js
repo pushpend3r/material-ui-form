@@ -17,6 +17,8 @@ async function main() {
     text: "Hello piyush?",
     html: "<b>Hello piyush?</b>",
   });
+
+  console.log(info);
 }
 
 exports.handler = async (event, context, callback) => {
