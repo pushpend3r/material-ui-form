@@ -1,4 +1,3 @@
-"use strict";
 const nodemailer = require("nodemailer");
 
 async function main() {
@@ -11,14 +10,14 @@ async function main() {
   });
 
   let info = await transporter.sendMail({
-    from: '"Fred Foo 👻" <bot@gmail.com>',
+    from: `"Fred Foo 👻" <${process.env.FROM_EMAIL}>`,
     to: "pushpend3r@gmail.com",
     subject: "Hello ✔",
     text: "Hello piyush?",
     html: "<b>Hello piyush?</b>",
   });
 
-  console.log(info);
+  return console.log(info);
 }
 
 exports.handler = async (event, context, callback) => {
