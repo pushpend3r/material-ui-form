@@ -21,9 +21,9 @@ async function main() {
 }
 
 exports.handler = async (event, context, callback) => {
-  main().catch(console.error);
+  const log = await main();
   return {
     statusCode: 200,
-    body: JSON.stringify({ msg: "Welcome to your first function" }),
+    body: JSON.stringify(log),
   };
 };
